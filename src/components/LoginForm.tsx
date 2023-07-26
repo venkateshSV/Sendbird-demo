@@ -1,6 +1,8 @@
-import React,{useEffect,useState} from 'react'
+import React,{useState} from 'react'
 import axios from 'axios'
-import { ToastContainer, toast } from 'react-toastify';
+import {  toast } from 'react-toastify';
+import {createSearchParams, useNavigate} from 'react-router-dom'
+import Home from './Home';
 
 
 
@@ -10,6 +12,7 @@ const LoginForm: React.FC = () =>{
     const [signUpUsername,setSignUpUsername] = useState("");
     const [userNickname,setUserNickname] = useState("");
     const [userData,setUserData]= useState("");
+    const navigate = useNavigate();
 
     const url: string = 'https://api-0C7E1462-839A-40B0-B4AC-5AED617BC521.sendbird.com/v3/';
     const header={
@@ -31,6 +34,13 @@ const LoginForm: React.FC = () =>{
     const userDetails = (newData:any) =>{
       console.log(newData);
       setUserData(newData);
+      navigate({
+        pathname: "/home",
+        search : createSearchParams({
+            id: newData['user_id']
+        }).toString()
+
+    });
     }
     const loginUser = async() =>{
       console.log(loginUsername);

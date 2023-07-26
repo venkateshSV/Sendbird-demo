@@ -1,10 +1,14 @@
 import React from 'react'
-import LoginForm from './LoginForm'
+import HeaderSidebarHome from './HeaderSidebarHome'
+import ChatWindow from './ChatWindow'
+
 type Props = {}
 
 const Home:React.FC = ({}: Props) =>{
   return (
-    <div></div>
+    <div>
+      <HeaderSidebarHome />
+    </div>
   )
 }
 
