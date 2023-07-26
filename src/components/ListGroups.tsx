@@ -50,7 +50,7 @@ useEffect(() => {
 }, []);
   return (
     <div>
-    <div style={{float:'left',paddingLeft:'10px',paddingRight:'2em',margin:'auto',position:'fixed',fontSize:'25px',left:'0',border:'1px solid black'}}>
+    <div style={{float:'left',paddingLeft:'10px',paddingRight:'2em',margin:'auto',position:'fixed',fontSize:'25px',left:'0',border:'1px solid black',height:'90vh'}}>
       <div style={{paddingTop:'4em',paddingRight:'8em'}}>
         <p>Groups</p>
         <div>

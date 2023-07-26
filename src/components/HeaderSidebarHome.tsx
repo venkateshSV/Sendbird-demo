@@ -12,6 +12,7 @@ interface userDeets  {
 
 const HeaderSidebarHome: React.FC = () => {
     const [searchParams] = useSearchParams();
+    const [modalIsOpen,setModalIsOpen] = useState(false);
     const [userData,setUserData] = useState<userDeets>({access_token:"",nickname:"",user_id:""});
     const userId = searchParams.get('id');
     const url: string = 'https://api-0C7E1462-839A-40B0-B4AC-5AED617BC521.sendbird.com/v3/';
@@ -35,6 +36,7 @@ const HeaderSidebarHome: React.FC = () => {
             console.log(error);
           }
     }
+
     useEffect(() => {
         getUserDetails();
       }, []);
@@ -43,7 +45,7 @@ const HeaderSidebarHome: React.FC = () => {
         <div style={{float:'left',paddingLeft:'10px',paddingRight:'6em',position:'fixed',fontSize:'25px',left:'0',border:'1px solid black'}}>
             <span>
                 <span>Nickname: {userData['nickname']}</span>
-                <span style={{paddingLeft:'30px'}}><button style={{backgroundColor: '#003C6D',color: 'white',borderRadius: 5, marginTop: 10, fontSize: 20}}>Create Grp</button></span>
+                <span style={{paddingLeft:'30px'}}><button style={{backgroundColor: '#003C6D',color: 'white',borderRadius: 5, marginTop: 10, fontSize: 20}} >Create Grp</button></span>
             </span>
             <p>User_Id: {userData['user_id']}</p>
         </div>
