@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Sendbird-demo/static/css/main.8582a8ff.css",
+    "main.js": "/Sendbird-demo/static/js/main.840641df.js",
+    "index.html": "/Sendbird-demo/index.html",
+    "main.8582a8ff.css.map": "/Sendbird-demo/static/css/main.8582a8ff.css.map",
+    "main.840641df.js.map": "/Sendbird-demo/static/js/main.840641df.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8582a8ff.css",
+    "static/js/main.840641df.js"
+  ]
+}
